@@ -1,5 +1,7 @@
 Compiled by Adams Paul and DSC - University of Ibadan.
 
+Please Note: State breakdown APIs is not available for nigeria anymore.
+
 ## COVID19 APIs
 
 A full documentation of the API
