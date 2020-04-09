@@ -6,17 +6,19 @@ A full documentation of the API
 
 ### EndPoints
 
-All Data Endpoints (Global): https://corona.lmao.ninja/all
+All Data Endpoint (Global): https://corona.lmao.ninja/all
 
-All Countries Data Endpoints (Global): https://corona.lmao.ninja/countries
+All Countries Data Endpoint (Global): https://corona.lmao.ninja/countries
 
-Specific Country Data Endpoints (Global): https://corona.lmao.ninja/countries/Nigeria
+Specific Country Data Endpoint (Global): https://corona.lmao.ninja/countries/Nigeria
 
-All Data Endpoints (Global): https://corona.lmao.ninja/all
+All Data Endpoint (Global): https://corona.lmao.ninja/all
+
+Time Series Endpoint
 
 ### Response formats
 
-All Data Endpoints (Global): [https://corona.lmao.ninja/all](https://corona.lmao.ninja/all)
+All Data Endpoint (Global): [https://corona.lmao.ninja/all](https://corona.lmao.ninja/all)
 
 `````
 
@@ -37,7 +39,7 @@ All Data Endpoints (Global): [https://corona.lmao.ninja/all](https://corona.lmao
 }
 ``````
 
-All Countries Data Endpoints (Global): [https://corona.lmao.ninja/countries](https://corona.lmao.ninja/countries)
+All Countries Data Endpoint (Global): [https://corona.lmao.ninja/countries](https://corona.lmao.ninja/countries)
 
 `````
 
@@ -67,7 +69,7 @@ All Countries Data Endpoints (Global): [https://corona.lmao.ninja/countries](htt
   },
   `````
 
-Specific Country Data Endpoints (Global): [https://corona.lmao.ninja/countries/Nigeria](https://corona.lmao.ninja/countries/Nigeria)
+Specific Country Data Endpoint (Global): [https://corona.lmao.ninja/countries/Nigeria](https://corona.lmao.ninja/countries/Nigeria)
 
 `````
 
@@ -95,7 +97,7 @@ Specific Country Data Endpoints (Global): [https://corona.lmao.ninja/countries/N
   "testsPerOneMillion": 24
 }
 `````
-###JS Query Sample Code
+### JS Query Sample Code For Single Nigeria Data
 
 `````
 <script>
@@ -126,3 +128,15 @@ Specific Country Data Endpoints (Global): [https://corona.lmao.ninja/countries/N
     });
 </script>
 `````
+### JS Query Sample Code For Time Series Nigeria Data
+
+````
+fetch("https://pomber.github.io/covid19/timeseries.json")
+  .then(response => response.json())
+  .then(data => {
+    data["Argentina"].forEach(({ date, confirmed, recovered, deaths }) =>
+      console.log(`${date} active cases: ${confirmed - recovered - deaths}`)
+    );
+  });
+  
+````
