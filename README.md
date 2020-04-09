@@ -99,6 +99,54 @@ Specific Country Data Endpoint (Global): [https://corona.lmao.ninja/countries/Ni
   "testsPerOneMillion": 24
 }
 `````
+
+Time Series Endpoint: [https://coviddata.github.io/coviddata/v1/countries/stats.json](https://coviddata.github.io/coviddata/v1/countries/stats.json)
+
+`````
+{
+    "country": {
+      "key": "nigeria",
+      "name": "Nigeria"
+    },
+    "dates": {
+      "2020-02-28": {
+        "new": {
+          "cases": 1,
+          "deaths": 0,
+          "recoveries": 0
+        },
+        "cumulative": {
+          "cases": 1,
+          "deaths": 0,
+          "recoveries": 0
+        }
+      },
+      "2020-02-29": {
+        "new": {
+          "cases": 0,
+          "deaths": 0,
+          "recoveries": 0
+        },
+        "cumulative": {
+          "cases": 1,
+          "deaths": 0,
+          "recoveries": 0
+        }
+      },
+      "2020-03-01": {
+        "new": {
+          "cases": 0,
+          "deaths": 0,
+          "recoveries": 0
+        },
+        "cumulative": {
+          "cases": 1,
+          "deaths": 0,
+          "recoveries": 0
+        }
+      },....
+````
+
 ### JS Query Sample Code For Single Nigeria Data
 
 `````
