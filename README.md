@@ -95,4 +95,34 @@ Specific Country Data Endpoints (Global): [https://corona.lmao.ninja/countries/N
   "testsPerOneMillion": 24
 }
 `````
+###JS Query Sample Code
 
+`````
+<script>
+    $.getJSON('https://corona.lmao.ninja/countries/Nigeria', function(data) {
+
+        var output = document.getElementById('output');
+        output.innerHTML = `
+        <div class="">
+            <h1 class="post-title">
+                # Nigeria Live Stats
+            </h1>
+            <div>
+                <font style="font-size: 20px;">🤪 No of Recovered Cases: <b>${data.recovered}</b></font>
+            </div>
+            <div>
+                <font style="font-size: 20px;">🤢 No of New Cases Today: <b>${data.todayCases}</b></font>
+            </div>
+            <div>
+                <font style="font-size: 20px;">🤒 No of Confirmed Cases: <b>${data.cases}</b></font>
+            </div>
+            <div>
+                <font style="font-size: 20px;">😭 No of Death: <b>${data.deaths}</b></font>
+            </div>
+        
+        </div>
+        `;
+
+    });
+</script>
+`````
