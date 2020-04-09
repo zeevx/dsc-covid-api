@@ -14,7 +14,7 @@ Specific Country Data Endpoint (Global): https://corona.lmao.ninja/countries/Nig
 
 All Data Endpoint (Global): https://corona.lmao.ninja/all
 
-Time Series Endpoint
+Time Series Endpoint: https://coviddata.github.io/coviddata/v1/countries/stats.json
 
 ### Response formats
 
@@ -131,12 +131,13 @@ Specific Country Data Endpoint (Global): [https://corona.lmao.ninja/countries/Ni
 ### JS Query Sample Code For Time Series Nigeria Data
 
 ````
-fetch("https://pomber.github.io/covid19/timeseries.json")
+fetch("https://coviddata.github.io/coviddata/v1/countries/stats.json")
   .then(response => response.json())
   .then(data => {
-    data["Argentina"].forEach(({ date, confirmed, recovered, deaths }) =>
-      console.log(`${date} active cases: ${confirmed - recovered - deaths}`)
-    );
-  });
+    const country = data.find(country => country.country.name == "Nigeria");
+    for (date in country.dates) {
+      console.log(`${date} - ${country.dates[date].cumulative.cases} cases`);
+    }
+  })
   
 ````
