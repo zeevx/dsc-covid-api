@@ -145,14 +145,13 @@ Time Series Endpoint: [https://coviddata.github.io/coviddata/v1/countries/stats.
           "recoveries": 0
         }
       },....
-````
+``````
 
 ### JS Query Sample Code For Single Nigeria Data
 
-`````
+``````
 <script>
     $.getJSON('https://corona.lmao.ninja/countries/Nigeria', function(data) {
-
         var output = document.getElementById('output');
         output.innerHTML = `
         <div class="">
@@ -177,7 +176,7 @@ Time Series Endpoint: [https://coviddata.github.io/coviddata/v1/countries/stats.
 
     });
 </script>
-`````
+``````
 ### JS Query Sample Code For Time Series Nigeria Data
 
 ````
